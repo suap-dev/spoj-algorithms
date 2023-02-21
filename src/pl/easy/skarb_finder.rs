@@ -35,7 +35,7 @@ struct SimplerMap {
     y: i32,
 }
 impl SimplerMap {
-    pub fn create() -> Self {
+    pub const fn create() -> Self {
         Self { x: 0, y: 0 }
     }
     pub fn reset(&mut self) {
