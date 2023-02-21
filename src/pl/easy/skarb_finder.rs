@@ -1,4 +1,4 @@
-use std::cmp::Ordering::*;
+use std::cmp::Ordering::{Equal, Greater, Less};
 use std::io::{stdin, BufRead};
 
 pub fn skarb() {
