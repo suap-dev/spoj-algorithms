@@ -27,6 +27,6 @@ fn test() {
         buf.clear();
         stdin.read_line(&mut buf).expect("Reading failed");
 
-        // TODO
+        // TODO: prototyping here, since we need to paste the main function to SPOJ anyway
     }
 }
