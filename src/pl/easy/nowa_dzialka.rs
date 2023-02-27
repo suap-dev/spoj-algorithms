@@ -1,6 +1,6 @@
 use std::io::stdin;
 
-pub fn dzialka() {
+pub fn test() {
     let mut line = String::new();
 
     stdin().read_line(&mut line).unwrap();

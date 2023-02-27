@@ -26,7 +26,7 @@ fn test() {
     for _ in 0..t {
         buf.clear();
         stdin.read_line(&mut buf).expect("Reading failed");
-        
+
         // TODO
     }
 }

@@ -1,7 +1,7 @@
 use std::cmp::Ordering::{Equal, Greater, Less};
 use std::io::{stdin, BufRead};
 
-pub fn skarb() {
+pub fn test() {
     let _stdin = stdin();
     let mut stdin = _stdin.lock();
     let mut buf: String = String::new();

@@ -1,6 +1,6 @@
 use std::io::{stdin, stdout, BufRead, Write};
 
-pub fn poz() {
+pub fn test() {
     // we know the nunbers will be at most 1_000_000 digits long
     let mut buffer = String::with_capacity(1_000_010);
 

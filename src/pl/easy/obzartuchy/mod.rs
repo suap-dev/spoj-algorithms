@@ -2,11 +2,15 @@ const SECONDS_IN_A_DAY: u32 = 24 * 60 * 60;
 
 pub mod functions;
 
-use std::io::stdin;
 use functions::{get_boxes_needed, get_cookies_needed, get_gluttons_cookies, read_number};
+use std::io::stdin;
+
+pub fn test() {
+    ob1();
+}
 
 // different implementations below
-pub fn ob1() {
+fn ob1() {
     let mut cookies_needed: u32;
     let mut gluttons_cookies; // .0 -> gluttons attending; .1 -> cookies per box
 
@@ -21,7 +25,7 @@ pub fn ob1() {
 }
 
 // unstable in rustc 1.56
-pub fn ob2() {
+fn ob2() {
     let mut lines_iterator = stdin().lines();
 
     let number_of_tests: u32 = lines_iterator.next().unwrap().unwrap().parse().unwrap();
@@ -37,14 +41,14 @@ pub fn ob2() {
             let eating_time: u32 = lines_iterator.next().unwrap().unwrap().parse().unwrap();
             cookies_needed += SECONDS_IN_A_DAY / eating_time;
         }
-        let boxes_needed = cookies_needed / cookies_in_a_box
-            + u32::from(cookies_needed % cookies_in_a_box != 0);
+        let boxes_needed =
+            cookies_needed / cookies_in_a_box + u32::from(cookies_needed % cookies_in_a_box != 0);
         println!("{}", boxes_needed);
     }
 }
 
-// it works exactly as obzartuchy1()
-pub fn ob3() {
+// it works almost exactly like ob1()
+fn ob3() {
     let mut line: String = String::new();
 
     // let number_of_tests: u32 = lines_iterator.next().unwrap().unwrap().parse().unwrap();
@@ -68,8 +72,8 @@ pub fn ob3() {
             let eating_time: u32 = line.trim().parse().unwrap();
             cookies_needed += SECONDS_IN_A_DAY / eating_time;
         }
-        let boxes_needed = cookies_needed / cookies_in_a_box
-            + u32::from(cookies_needed % cookies_in_a_box != 0);
+        let boxes_needed =
+            cookies_needed / cookies_in_a_box + u32::from(cookies_needed % cookies_in_a_box != 0);
         println!("{}", boxes_needed);
     }
 }

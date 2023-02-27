@@ -1,6 +1,6 @@
 use std::io;
 
-pub fn piotrus() {
+pub fn test() {
     let mut text: String = String::new();
     io::stdin()
         .read_line(&mut text)

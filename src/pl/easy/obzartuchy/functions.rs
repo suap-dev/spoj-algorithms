@@ -4,8 +4,7 @@ use std::io::stdin;
 
 #[inline]
 pub fn get_boxes_needed(cookies_needed: u32, cookies_per_box: u32) -> u32 {
-    cookies_needed / cookies_per_box
-        + u32::from(cookies_needed % cookies_per_box != 0)
+    cookies_needed / cookies_per_box + u32::from(cookies_needed % cookies_per_box != 0)
 }
 
 #[inline]

@@ -1,6 +1,6 @@
 use std::io::{stdin, BufRead};
 
-pub fn problem() {
+pub fn test() {
     let stdin = stdin();
     let mut stdin = stdin.lock();
     let mut buf = String::new();
